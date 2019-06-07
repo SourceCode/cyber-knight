@@ -2,7 +2,7 @@ package Narrator
 
 import (
 	"fmt"
-	"gitlab.com/rrentfro/go-sandbox-1/Player"
+	"github.com/SourceCode/cyber-knight/Player"
 )
 
 

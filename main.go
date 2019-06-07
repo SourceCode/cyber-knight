@@ -3,9 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"gitlab.com/rrentfro/go-sandbox-1/Engine"
-	"gitlab.com/rrentfro/go-sandbox-1/Narrator"
-	"gitlab.com/rrentfro/go-sandbox-1/Player"
+	"github.com/SourceCode/cyber-knight/Engine"
+	"github.com/SourceCode/cyber-knight/Narrator"
+	"github.com/SourceCode/cyber-knight/Player"
 	"os"
 	"strconv"
 	"strings"

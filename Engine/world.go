@@ -1,8 +1,8 @@
 package Engine
 
 import (
-	"gitlab.com/rrentfro/go-sandbox-1/Narrator"
-	"gitlab.com/rrentfro/go-sandbox-1/Player"
+	"github.com/SourceCode/cyber-knight/Narrator"
+	"github.com/SourceCode/cyber-knight/Player"
 	"math/rand"
 	"time"
 )
