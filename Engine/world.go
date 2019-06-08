@@ -1,7 +1,6 @@
 package Engine
 
 import (
-	"fmt"
 	"github.com/SourceCode/cyber-knight/Narrator"
 	"github.com/SourceCode/cyber-knight/Player"
 	"math/rand"
@@ -37,15 +36,11 @@ var BiomeDesc  = map[string][]BiomeDescription{
 func EnterGameWorld(user *Player.UserClass) {
 	Narrator.MsgEnterWorld(user)
 	EnterRandomGamePoint(user)
+	GameLoop(user)
 }
 
 func EnterRandomGamePoint(user *Player.UserClass) {
 	getRandomStartLocation(user)
-	println("You find yourself in a " + user.LocationName)
-
-	switch user.LocationName {
-
-	}
 
 }
 
@@ -55,6 +50,6 @@ func getRandomStartLocation(user *Player.UserClass) {
 	user.LocationName = Biome[id]
 	bd := BiomeDesc[Biome[id]]
 	roomId := rand.Intn(len(bd))
-	desc := bd[roomId]
-	fmt.Print(desc)
+	user.LocationDescription = bd[roomId].Description
+	Narrator.MsgDescribeLocation(user)
 }

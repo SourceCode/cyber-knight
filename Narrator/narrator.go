@@ -15,12 +15,18 @@ func MsgSelectClass() {
 	fmt.Print("Enter 1-3: ")
 }
 
+func MsgEnterPlayerName() {
+	fmt.Println("Please enter a player name")
+}
+
 func MsgEnterWorld(user *Player.UserClass) {
-	println("Welcome to Cyber World young " + user.Class)
+	println("Welcome to Cyber World young " + user.Class + ".  This world has never known a " + user.Name)
 }
 
 func MsgDescribeLocation(user *Player.UserClass) {
-	println("You find yourself in a " + user.LocationName)
+	println("You find yourself in a " + user.LocationName + " You look around and see: " + user.LocationDescription)
+}
 
-
+func MsgEnterAction(user *Player.UserClass) {
+	println("Please enter an action such as forward, back, attack")
 }

@@ -28,9 +28,11 @@ func main() {
 	user.Class = Player.GetUserClass(csId)
 	user.Id = csId
 
-	//Start Game
-	//fmt.Println(csId, error)
-	//fmt.Println(user)
+	Narrator.MsgEnterPlayerName()
+
+	name, _ := reader.ReadString('\n')
+	name = strings.TrimSuffix(name, "\n")
+	user.Name = name
 
 	Engine.EnterGameWorld(&user)
 }
