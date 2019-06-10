@@ -16,7 +16,9 @@ func GameLoop(user *Player.UserClass) {
 		reader := bufio.NewReader(os.Stdin)
 		action, _ := reader.ReadString('\n')
 		action = strings.TrimSuffix(action, "\n")
+		RouteAction(action)
 		fmt.Printf("The action was %s\n", action)
+
 	}
 
 

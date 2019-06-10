@@ -30,3 +30,13 @@ func MsgDescribeLocation(user *Player.UserClass) {
 func MsgEnterAction(user *Player.UserClass) {
 	println("Please enter an action such as forward, back, attack")
 }
+
+func MsgCommandList() {
+	println("look - describes your environment")
+	println("next - move to the next room")
+	println("attack - attack the creature in the room")
+}
+
+func MsgCommandInvalid(a string) {
+	println(a + " is not a valid action")
+}
