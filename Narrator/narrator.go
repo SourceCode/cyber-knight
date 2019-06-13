@@ -5,8 +5,6 @@ import (
 	"github.com/SourceCode/cyber-knight/Player"
 )
 
-
-
 func MsgSelectClass() {
 	fmt.Println("Select a class")
 	for i, cName := range Player.ClassTypes {
@@ -21,6 +19,10 @@ func MsgEnterPlayerName() {
 
 func MsgEnterWorld(user *Player.UserClass) {
 	println("Welcome to Cyber World young " + user.Class + ".  This world has never known a " + user.Name)
+}
+
+func MsgMoveNextRoom() {
+	println("You have moved to a new room.")
 }
 
 func MsgDescribeLocation(user *Player.UserClass) {

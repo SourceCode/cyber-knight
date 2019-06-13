@@ -40,16 +40,20 @@ func EnterGameWorld(user *Player.UserClass) {
 }
 
 func EnterRandomGamePoint(user *Player.UserClass) {
-	getRandomStartLocation(user)
-
+	getRandomLocation(user)
 }
 
-func getRandomStartLocation(user *Player.UserClass) {
+func getRandomLocation(user *Player.UserClass) {
 	rand.Seed(time.Now().Unix())
 	id := rand.Intn(len(Biome))
 	user.LocationName = Biome[id]
 	bd := BiomeDesc[Biome[id]]
 	roomId := rand.Intn(len(bd))
 	user.LocationDescription = bd[roomId].Description
+	PushState(user)
 	Narrator.MsgDescribeLocation(user)
+}
+
+func MoveNextRoom(user *Player.UserClass) {
+	getRandomLocation(user)
 }
