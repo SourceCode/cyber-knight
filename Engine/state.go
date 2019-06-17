@@ -5,17 +5,22 @@ import (
 )
 
 type LocationMap struct {
-	Id int
-	LocationName string
-	LocationDescription string
+	Id          int
+	Name        string
+	Description string
 }
 
-type GameState struct {
-	Map map[string][]LocationMap
+type PlayerItem struct {
+	Id int
+	Name string
+	Description string
+	Act int
 }
 
 type SysState struct {
 	State []LocationMap
+	Bag map[string][]PlayerItem
+	Gold int
 }
 
 var LiveState SysState
