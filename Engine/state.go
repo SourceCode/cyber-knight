@@ -23,7 +23,8 @@ type SysState struct {
 	Gold int
 }
 
-var LiveState SysState
+var LiveState = SysState{Bag: map[string][]PlayerItem{
+	"Items": {{0, "Bomb", "A fun explosive", 3}} }, Gold: 0}
 
 func PushState (user *Player.UserClass) {
 	s := LocationMap{len(LiveState.State), user.LocationName, user.LocationDescription}

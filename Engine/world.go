@@ -19,6 +19,7 @@ var BiomeDesc  = map[string][]BiomeDescription{
 		{ "Dank Hallway", "The room is a hallway made of stench and rot."},
 		{ "Royal Chamber", "The room is covered in royal decorations."},
 		{"Torture Chamber", "The halls are covered bones in chains and blood stains."},
+		{"Wine Cellar", "The rooms lined with barrels of aging berry juice."},
 	},
 	Biome[1] : {
 		{ "Glass Rose Garden", "The courtyard is decorated in colorful roses made of glass."},
@@ -31,7 +32,6 @@ var BiomeDesc  = map[string][]BiomeDescription{
 		{"Weeds and Dirt", "The field is littered in weeds and dirt piles."},
 	},
 }
-
 
 func EnterGameWorld(user *Player.UserClass) {
 	Narrator.MsgEnterWorld(user)
