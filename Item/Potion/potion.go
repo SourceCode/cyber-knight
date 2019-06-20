@@ -12,5 +12,5 @@ type Potion struct {
 
 
 var PotionTable = []Potion{
-	{{1, "potion", "Health Potion", }}
+	{Item.Item{1, "potion", "Health Potion", "Heals 50 health", 1 }, "+HP", "Heals 50 health", false, true},
 }
